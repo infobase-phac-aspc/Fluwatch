@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+      <style type="text/css">
+         #fluwatch-visualization {
+            display: flex;
+            justify-content: space-evenly;
+         }
+
+         .y-grid line,
+         .x-grid line {
+            stroke: grey;
+            stroke-width: 0.5px;
+            stroke-dasharray: 0.5;
+         }
+
+         .x-grid .domain,
+         .y-grid .domain {
+            display: none;
+         }
+
+         .x-axis text,
+         .y-axis text {
+            display: none;
+         }
+
+         .province:hover {
+            fill: green;
+            cursor: pointer;
+         }
+
+         .province {
+            fill: #27ae60;
+            stroke: white;
+         }
+
+         .year {
+            display: inline;
+         }
+      </style>
+      <title>Flu Watch</title>
+   </head>
+
+   <body>
+      <div id="fluwatch-visualization">
+         <div id="map"></div>
+         <div id="vis">
+            <div id="controls">
+               <select id="flucategory">
+                 <option value="all" selected>all</option>
+                 <option value="aH3N2">aH3N2</option>
+                 <option value="aUns">aUns</option>
+                 <option value="aH1N1pdm09">aH1N1pdm09</option>
+               </select>
+               <select id="provinces">
+                  <option value="1" selected>Canada</option>
+               </select>
+               <select id="years">
+                  
+               </select>
+            </div>
+            <div id="areachart"></div>
+         </div>
+      </div>
+
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script src="https://peterbeshai.com/d3-interpolate-path/d3-interpolate-path.js"></script>
+      <script src="https://d3js.org/topojson.v1.min.js"></script>
+      <script src="./js/functions/misc.js"></script>
+      <script src="./js/maps/canada.js"></script>
+      <script src="./js/charts/areachart.v2.js"></script>
+      <script type="text/javascript" src="./js/index.js"></script>
+   </body>
+
+</html>
