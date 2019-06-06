@@ -55,9 +55,7 @@ d3.csv("./data/figure3.csv", function(csv) {
    }));
 
    let selectedProvince = 1;
-   
    let selectedFluCategory = "all";
-   
    let selectedYear = "2017-2018";
    
    let allYears = Object.keys(fluWatchByProvince);
